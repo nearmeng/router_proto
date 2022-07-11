@@ -1,7 +1,7 @@
 #ifndef  _ROUTER_MESSAGE_H_
 #define  _ROUTER_MESSAGE_H_
 
-#include "protocol/internal_message_header.h"
+#include "internal_message_header.h"
 
 #pragma pack(push, 1)
 
