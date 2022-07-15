@@ -3,9 +3,10 @@ cmake_minimum_required (VERSION 3.20)
 SET(TARGET_NAME "router_proto")
 project(${TARGET_NAME})
 
-list(APPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
+include (FetchContent)
+FetchContent_Declare(cmake_tool GIT_REPOSITORY https://github.com/nearmeng/cmake_tools.git GIT_TAG master)
+FetchContent_MakeAvailable(cmake_tool)
 
-include (fetch_content)
 fetch_content(ss_proto_common https://github.com/nearmeng/ss_proto_common.git master)
 
 add_library(${TARGET_NAME} INTERFACE)
