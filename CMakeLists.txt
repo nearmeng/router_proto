@@ -9,6 +9,8 @@ FetchContent_MakeAvailable(cmake_tool)
 
 fetch_content(ss_proto_common https://github.com/nearmeng/ss_proto_common.git master)
 
+init_project()
+
 add_library(${TARGET_NAME} INTERFACE)
 add_library(mango::${TARGET_NAME} ALIAS ${TARGET_NAME})
 
